@@ -1,6 +1,5 @@
 package com.example.demo.model;
 
-import lombok.Data;
 import java.util.Set;
 
 /**
@@ -11,13 +10,28 @@ import java.util.Set;
  * connectedCities is used to store the info reading from "city.txt" , showing which city is connected to this city.
  */
 
-@Data
 public class City {
     private String id;
     private Set<String> connectedCities;
 
     public City(String id, Set<String> connectedCities) {
         this.id = id;
+        this.connectedCities = connectedCities;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public Set<String> getConnectedCities() {
+        return connectedCities;
+    }
+
+    public void setConnectedCities(Set<String> connectedCities) {
         this.connectedCities = connectedCities;
     }
 }

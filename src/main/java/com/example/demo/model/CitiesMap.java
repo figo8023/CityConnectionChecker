@@ -14,6 +14,8 @@ import java.util.Map;
 public class CitiesMap {
     private static Map<String, City> citiesMap = null;
 
+    private CitiesMap() {}
+
     public static Map<String, City> getCitiesMap() {
         if (citiesMap == null) {
             citiesMap = Collections.synchronizedMap(new HashMap<>());
